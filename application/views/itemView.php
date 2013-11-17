@@ -7,9 +7,11 @@
         <input type="button" name="btnDelete" value="delete" size="25"/></br>
         <p>Categories</p>
         <ul style="list-style-type: circle">
-            <?php foreach($cat as $item):?>
-            <li><?php echo $item['categories']; ?></li>
-            <?php endforeach; ?>
+            <?php if(isset($item)): ?>
+                <?php foreach($cat as $item):?>
+                <li><?php echo $item['categories']; ?></li>
+                <?php endforeach; ?>
+            <?php endif; ?>
         </ul>
     </body>
 </HTML>

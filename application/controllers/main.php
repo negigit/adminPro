@@ -4,12 +4,12 @@
 		public function __construct()
 		{
 			parent::__construct();
-			$this->load->model('my_model');
+			$this->load->model('category');
 		}
 
 		public function index()
 		{
-			$data['cat']=$this->my_model->show();
+			$data['cat']=$this->category->get_all();
 			$this->load->view('itemView',$data);	
 			
 		}
